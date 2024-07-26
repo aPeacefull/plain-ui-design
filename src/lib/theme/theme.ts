@@ -5,13 +5,13 @@ import { spawn } from "child_process";
 
 export const themeLight = {
 
-		colors: {
+		color: {
 			background: {
-				background: {
-					primary: colors.white,
-					secondary: colors.grey[50],
-					control: colors.grey[100],
-				},
+
+				primary: colors.white,
+				secondary: colors.grey[50],
+				control: colors.grey[100],
+
 				extentions: {
 					stateActive: colors.grey[200],
 					stateDisabled: colors.grey[100],
@@ -58,11 +58,11 @@ export const themeLight = {
 			},
 
 			content: {
-				content: {
-					primary: colors.grey[800],
-					secondary: colors.grey[700],
-					tertiary: colors.grey[500],
-				},
+
+				primary: colors.grey[800],
+				secondary: colors.grey[700],
+				tertiary: colors.grey[500],
+
 				extentions: {
 					primaryOnColor: colors.white,
 					staticWhite: colors.white,
@@ -80,9 +80,9 @@ export const themeLight = {
 			},
 
 			border: {
-				border: {
-					opaque: colors.grey[200],
-				},
+
+				opaque: colors.grey[200],
+
 				extentions: {
 					transparent: "hsla(220,23%,7%, 0.08)",
 					stateActive: colors.grey[800],
@@ -120,10 +120,30 @@ export const themeLight = {
 		distant: numbers[52],
 		distantSeparated: numbers[72],
 		distantIndependant: numbers[96],
+		width: 200,
 	},
 
-	shadows: {
-		focus: `0px 0px 0px 4px var(--border-border-purple, #6D59E8)`,
+	padding: {
+		noPadding: 0,
+		tiny: numbers[4],
+		small: numbers[8],
+		compact: numbers[12],
+		base: numbers[20],
+		relaxed: numbers[24],
+		large: numbers[32],
+		xLarge: numbers[52],
+	},
+
+	height: {
+		small: numbers[16],
+		medium: numbers[24],
+		base: numbers[36],
+		large: numbers[48],
+		xLarge: numbers[64],
+	},
+
+	shadow: {
+		focus: `0px 0px 0px 4px rgba(109, 89, 232, 1)`,
 		shallowUp: `0px -2px 16px 0px rgba(14, 16, 22, 0.10)`,
 		shallowDown: `0px 2px 16px 0px rgba(14, 16, 22, 0.10)`,
 		deepUp: `0px -8px 26px 0px rgba(14, 16, 22, 0.16)`,
@@ -175,7 +195,7 @@ export const themeLight = {
 
 	cornerRadius: {
 		small: numbers[2],
-		default: numbers[6],
+		base: numbers[6],
 		medium: numbers[16],
 		large: numbers[32],
 	},
@@ -193,13 +213,11 @@ export const themeLight = {
 export const themeNight = {
 	...themeLight,
 
-	colors: {
+	color: {
 		background: {
-			background: {
-				primary: colors.grey[900],
-				secondary: colors.grey[800],
-				control: colors.grey[600],
-			},
+			primary: colors.grey[900],
+			secondary: colors.grey[800],
+			control: colors.grey[600],
 			extentions: {
 				stateActive: colors.grey[500],
 				stateDisabled: colors.grey[700],
@@ -246,11 +264,9 @@ export const themeNight = {
 		},
 
 		content: {
-			content: {
-				primary: colors.white,
-				secondary: colors.grey[200],
-				tertiary: colors.grey[400],
-			},
+			primary: colors.white,
+			secondary: colors.grey[200],
+			tertiary: colors.grey[400],
 			extentions: {
 				primaryOnColor: colors.grey[800],
 				staticWhite: colors.white,
@@ -268,9 +284,7 @@ export const themeNight = {
 		},
 
 		border: {
-			border: {
-				opaque: colors.grey[700],
-			},
+			opaque: colors.grey[700],
 			extentions: {
 				transparent: "hsla(0, 0%,100%, 0.32)",
 				stateActive: colors.white,
