@@ -20,6 +20,13 @@ export const typography = {
 		xSmall: "11px",
 	},
 
+	letterSpacing: {
+		negative3: "-0.03em",
+		negative2: "-0.02em",
+		negative1: "-0.01em",
+		base: "0em",
+	},
+
 	lineHeight: {
 		hero: "140px",
 		h1: "56px",
