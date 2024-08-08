@@ -7,8 +7,7 @@ export type TAppearance = "primary" | "secondary" | "desctructive" | "inverse";
 export interface IButtonRectangularProps {
   appearance?: TAppearance;
   disabled?: boolean;
-  //  todo loading boolean prop
-  //loading: 
+  loading?: boolean;
   text?: string;
   size?: "base" | "large";
   leadingElement?: ReactNode;
@@ -28,8 +27,7 @@ export const StyledButtonRectangular = styled.button<IButtonRectangularProps>`
   justify-content: center;
   box-shadow: none;
   padding: ${(props) => props.theme.padding.noPadding} ${(props) => props.theme.padding.base};
-  cursor: pointer; 
-  min-width: 160px; 
+  cursor: pointer;  
 
   &:focus {
     outline: none;
@@ -40,6 +38,7 @@ export const StyledButtonRectangular = styled.button<IButtonRectangularProps>`
     props.size === "base" && 
     `
       height: ${props.theme.height.base};
+      min-width: 56px;
 
  `}   
 
@@ -47,6 +46,7 @@ export const StyledButtonRectangular = styled.button<IButtonRectangularProps>`
     props.size === "large" && 
     `
       height: ${props.theme.height.large};
+      min-width: 64px;
 
   `}    
 
@@ -141,12 +141,19 @@ export const StyledButtonRectangular = styled.button<IButtonRectangularProps>`
 
 export const ButtonRectangular : FC<IButtonRectangularProps> = ({
   appearance = "primary", 
-  text = "ButtonX",
+  text = "ButtonLabel",
   size = "base",
   disabled,
+  leadingElement,
+  trailingElement,
 }) => {
   return (
-    <StyledButtonRectangular text={text} appearance={appearance} size={size} disabled={disabled} >
+    <StyledButtonRectangular 
+    text={text} 
+    appearance={appearance} 
+    size={size} disabled={disabled} 
+    leadingElement={leadingElement} 
+    trailingElement={trailingElement}>
       {text}
     </StyledButtonRectangular>
   );
